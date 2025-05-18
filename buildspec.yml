@@ -7,9 +7,9 @@ phases:
       # Check AWS CLI version
       - aws --version
       # Log in to Amazon ECR
-      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 878024754941.dkr.ecr.us-east-1.amazonaws.com
+      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 386544359846.dkr.ecr.us-east-1.amazonaws.com
       # Define repository URI and image tag
-      - REPOSITORY_URI=878024754941.dkr.ecr.us-east-1.amazonaws.com/awsdevopsecr
+      - REPOSITORY_URI=386544359846.dkr.ecr.us-east-1.amazonaws.com/awsbootspringapp
       - IMAGE_TAG=build-$(echo $CODEBUILD_BUILD_ID | awk -F":" '{print $2}')
   build:
     commands:
